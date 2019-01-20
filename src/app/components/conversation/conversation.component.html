@@ -1,0 +1,9 @@
+<div class="container">
+    <span class="senderMessage">
+        {{senderMessage}}
+      </span>
+      <div *ngIf="show">
+        <span class="reciverMessage">hi, Jon</span>
+      </div>
+</div>
+<app-text-msg (messageEvent)="receiveMessage($event)"></app-text-msg>
