@@ -14,7 +14,6 @@
 
         <!-- Modal body -->
         <div class="modal-body">
-          <!-- <app-conversation></app-conversation> -->
           <div style="widows: 30%;">
             <span class="senderMessage">
               {{senderMessage}}
@@ -24,18 +23,10 @@
               <span style="margin-top:20px" class="reciverMessage">How are you?</span>
             </div>
           </div>
-          <!-- <div class="subtextmsg">
-            <i id="text" class="fa fa-smile-o"></i>
-            <span>we run on Intercon</span>
-          </div> -->
         </div>
 
         <!-- Modal footer -->
         <div class="modal-footer">
-          <div class="subtextmsg">
-            <!-- <i id="text" class="fa fa-smile-o"></i>
-                <span>we run on Intercon</span> -->
-          </div>
           <hr>
           <app-text-msg (messageEvent)="receiveMessage($event)"></app-text-msg>
         </div>

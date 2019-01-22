@@ -4,14 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { ModalModule} from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
-import { ConversationComponent } from './components/conversation/conversation.component';
 import { InfobarComponent } from './components/infobar/infobar.component';
 import { TextMsgComponent } from './components/text-msg/text-msg.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConversationComponent,
     InfobarComponent,
     TextMsgComponent
   ],
