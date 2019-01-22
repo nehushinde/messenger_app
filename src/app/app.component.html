@@ -1,4 +1,49 @@
-<div>
-  <app-infobar></app-infobar>
-</div>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  Open Messanger App
+</button>
+<div class="container" *ngIf="isModalShown">
+  <!-- <app-infobar></app-infobar> -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
 
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <app-infobar></app-infobar>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <!-- <app-conversation></app-conversation> -->
+          <div style="widows: 30%;">
+            <span class="senderMessage">
+              {{senderMessage}}
+            </span>
+            <div *ngIf="show">
+              <span class="reciverMessage">Hi, Jon</span>
+              <span style="margin-top:20px" class="reciverMessage">How are you?</span>
+            </div>
+          </div>
+          <!-- <div class="subtextmsg">
+            <i id="text" class="fa fa-smile-o"></i>
+            <span>we run on Intercon</span>
+          </div> -->
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <div class="subtextmsg">
+            <!-- <i id="text" class="fa fa-smile-o"></i>
+                <span>we run on Intercon</span> -->
+          </div>
+          <hr>
+          <app-text-msg (messageEvent)="receiveMessage($event)"></app-text-msg>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<a id="closeicon" (click)="closeModal()" class="btn btn-primary" aria-label="true">
+  <i class="fa fa-close" aria-hidden="true"></i>
+</a>

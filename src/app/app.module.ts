@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ModalModule} from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { ConversationComponent } from './components/conversation/conversation.component';
@@ -16,7 +17,8 @@ import { TextMsgComponent } from './components/text-msg/text-msg.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
